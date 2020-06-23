@@ -12,6 +12,16 @@ const getData = () => {
 }
 getData();
 
+const updateSearches = (index) => {
+  $.ajax({
+    url: "/api/players",
+    data: {
+      "index": index,
+    },
+    method: "POST"
+  })
+}
+
 // Search filter
 const searchBar = $("#search-bar");
 const searchList = $("#search-list");
@@ -62,6 +72,7 @@ searchBar.keyup(() => {
     const index = $(event.target).data("index");
     searchBar.val("");
     searchList.html("");
+    updateSearches(index);
     addedPlayers.push({
       index: index,
       id: data.players[index].id,
