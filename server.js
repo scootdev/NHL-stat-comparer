@@ -12,5 +12,5 @@ app.use("/api", apiRouter);
 app.use("/", htmlRouter);
 
 app.listen(PORT, function() {
-    console.log("Note Taker listening on PORT: " + PORT);
+    console.log("listening on PORT: " + PORT);
   });
