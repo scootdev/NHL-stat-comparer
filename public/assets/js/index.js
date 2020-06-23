@@ -113,3 +113,9 @@ $("#sortBy").change(() => {
   console.log(sort);
   sortCards();
 })
+
+// When the clear button is pressed 
+$("#clearBtn").click(() => {
+  addedPlayers = [];
+  sortCards();
+})
