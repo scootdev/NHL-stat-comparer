@@ -65,7 +65,7 @@ searchBar.keyup(() => {
     }
     for (let i = 0; i < num; i++) {
       const result = results[i];
-      searchList.append(`<a href="#"><li class="list-group-item result" data-index="${result.index}"><img class="mr-3" src="${result.image}" onError="this.onerror=null; this.src='./assets/img/blank.png';" width="60" height="60" />${result.name}</li></a>`);
+      searchList.append(`<a href="#"><li class="list-group-item result" data-index="${result.index}"><img class="mr-3 result" src="${result.image}" onError="this.onerror=null; this.src='./assets/img/blank.png';" width="60" height="60" data-index="${result.index}"/>${result.name}</li></a>`);
     }
   }
   $(".result").click((event) => {
